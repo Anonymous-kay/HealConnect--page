@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.healconnect.healconnect.controller.AppointmentBookingController">
+    <children>
+        <Label text="Book an Appointment" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+            <ComboBox fx:id="providerComboBox" promptText="Select Provider"/>
+            <DatePicker fx:id="datePicker" promptText="Select Date"/>
+            <HBox spacing="10">
+                <ComboBox fx:id="hourComboBox" promptText="Hour"/>
+                <ComboBox fx:id="minuteComboBox" promptText="Minute"/>
+                <ComboBox fx:id="amPmComboBox" promptText="AM/PM"/>
+            </HBox>
+            <TextArea fx:id="reasonTextArea" promptText="Reason for Appointment" wrapText="true" prefRowCount="3"/>
+            <ToggleGroup fx:id="urgencyGroup">
+                <ToggleButton text="Normal" userData="Normal"/>
+                <ToggleButton text="Urgent" userData="Urgent"/>
+            </ToggleGroup>
+            <Label fx:id="errorLabel" style="-fx-text-fill: red;"/>
+            <HBox spacing="10">
+                <Button text="Book Appointment" onAction="#handleBookAppointment"/>
+                <Button text="Cancel" onAction="#handleCancel"/>
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

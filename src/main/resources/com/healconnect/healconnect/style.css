@@ -1,0 +1,32 @@
+/* General Styles */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+}
+
+/* Button Styles */
+.table-action-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 5;
+}
+
+/* Chat Message Bubble */
+.chat-message-bubble {
+    -fx-background-color: #e0e0e0;
+    -fx-background-radius: 10;
+    -fx-padding: 10;
+    -fx-text-fill: black;
+}
+
+/* Error Label */
+.error-label {
+    -fx-text-fill: red;
+}
+
+/* Placeholder for video stream */
+.video-placeholder {
+    -fx-background-color: #000;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+}

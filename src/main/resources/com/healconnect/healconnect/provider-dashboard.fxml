@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.healconnect.healconnect.controller.ProviderDashboardController">
+    <children>
+        <Label text="Provider Dashboard" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+            <Label text="Welcome, [Provider Name]" style="-fx-font-size: 18;"/>
+            <Label text="Today's Appointments: " fx:id="todaysAppointmentsLabel"/>
+            <Button text="View Appointments" onAction="#handleViewAppointments"/>
+            <Button text="View Patients" onAction="#handleViewPatients"/>
+            <Button text="Logout" onAction="#handleLogout"/>
+        </VBox>
+    </children>
+</AnchorPane>

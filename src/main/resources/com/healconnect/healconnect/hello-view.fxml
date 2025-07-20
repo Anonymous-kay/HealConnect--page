@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.healconnect.healconnect.controller.LoginController">
+    <children>
+        <Label text="Welcome to HealConnect" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+            <TextField fx:id="usernameField" promptText="Username"/>
+            <PasswordField fx:id="passwordField" promptText="Password"/>
+            <Label fx:id="messageLabel" style="-fx-text-fill: red;"/>
+            <Button text="Login" onAction="#handleLoginButtonAction"/>
+        </VBox>
+    </children>
+</AnchorPane>

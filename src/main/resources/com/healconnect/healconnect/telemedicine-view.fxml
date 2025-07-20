@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.healconnect.healconnect.controller.TelemedicineController">
+    <children>
+        <Label text="Telemedicine Consultation" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+            <Label text="Patient: [Patient Name]" fx:id="patientNameLabel"/>
+            <Label text="Age/Gender: [Age/Gender]" fx:id="patientAgeGenderLabel"/>
+            <ImageView fx:id="patientAvatar" fitWidth="100" fitHeight="100" />
+            <StackPane fx:id="videoContainer" style="-fx-background-color: black; -fx-pref-width: 640; -fx-pref-height: 480;">
+                <Label text="Video Stream" style="-fx-text-fill: white;"/>
+            </StackPane>
+            <TextArea fx:id="consultationNotesArea" promptText="Enter consultation notes..." wrapText="true" prefRowCount="5"/>
+            <Button text="End Call" onAction="#handleEndCall"/>
+            <Button text="Send Message" onAction="#handleSendMessage"/>
+            <TextField fx:id="messageField" promptText="Type your message here..."/>
+            <Button text="Create Prescription" onAction="#handleCreatePrescription"/>
+            <Button text="View Records" onAction="#handleViewRecords"/>
+        </VBox>
+    </children>
+</AnchorPane>

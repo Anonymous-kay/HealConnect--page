@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.healconnect.healconnect.controller.MedicalRecordsController">
+    <children>
+        <Label text="Medical Records" style="-fx-font-size: 24; -fx-font-weight: bold;" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10"/>
+
+        <VBox spacing="10" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="50">
+            <TextField fx:id="searchField" promptText="Search Records" onKeyReleased="#handleSearch"/>
+            <TableView fx:id="recordsTableView">
+                <columns>
+                    <TableColumn text="Date" />
+                    <TableColumn text="Type" />
+                    <TableColumn text="Description" />
+                    <TableColumn text="Actions" />
+                </columns>
+            </TableView>
+            <Button text="Add Record" onAction="#handleAddRecord"/>
+        </VBox>
+    </children>
+</AnchorPane>
